@@ -84,12 +84,7 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-  if foods.include?("うに")
-    puts "好物です"
-  else
-    puts "まぁまぁ好きです"
-  end
-
+  puts foods.include?("うに") ? "好物です" : "まぁまぁ好きです"
 end
 
 def q11
@@ -97,9 +92,8 @@ def q11
 
   # 以下に回答を記載
   # flatten 展開　uniq 重複削除
-  ver2_sports = sports.flatten.uniq
   puts "ユーザーの趣味一覧"
-  ver2_sports.each.with_index(1) do |item,i|
+  ver2_sports = sports.flatten.uniq.each.with_index(1) do |item,i|
     puts "No.#{i} #{item}"
   end
 
@@ -135,16 +129,9 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  if data1.has_key?(:age)
-    puts "OK"
-  else
-    puts "NG"
-  end
-  if data2.has_key?(:age)
-    puts "OK"
-  else
-    puts "NG"
-  end
+  puts data1.has_key?(:age) ? "OK" : "NG"
+  puts data2.has_key?(:age) ? "OK" : "NG"
+  
 end
 
 def q16

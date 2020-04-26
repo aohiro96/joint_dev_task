@@ -5,7 +5,10 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  names.push("斉藤")
+  names.each do |name|
+    puts name
+  end
 end
 
 def q2
@@ -13,21 +16,28 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-
+  array1.push(array2)
+  puts array1
 end
 
 def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
-
+  i = 0
+  numbers.each do |number|
+    if number === 3
+      i += 1
+    end
+  end
+  puts i
 end
 
 def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-
+  sports.compact!
   # 以下は変更しないで下さい
   p sports
 end
@@ -37,14 +47,24 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-
+  if array1.empty?
+    puts ("true")
+  end
+  if !(array2.empty?)
+    puts ("false")
+  end
 end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-
+  numbers2 = []
+  numbers1.each do |number|
+    number *= 10
+    numbers2.push(number)
+  end
+  puts numbers2
 end
 
 def q7

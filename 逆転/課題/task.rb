@@ -93,7 +93,7 @@ def q11
   # 以下に回答を記載
   # flatten 展開　uniq 重複削除
   puts "ユーザーの趣味一覧"
-  ver2_sports = sports.flatten.uniq.each.with_index(1) do |item,i|
+  sports.flatten.uniq.each.with_index(1) do |item,i|
     puts "No.#{i} #{item}"
   end
 
